@@ -1,0 +1,95 @@
+----> jdk version 7,8,11
+
+https://www.javahelps.com/2017/09/install-oracle-jdk-9-on-linux.html
+
+sudo update-alternatives --config java
+sudo update-alternatives --config javac
+
+
+---->maven
+
+https://www.javahelps.com/2017/10/install-apache-maven-on-linux.html
+
+
+---->sts
+
+downloaded from website 
+
+In favourite:
+
+[Desktop Entry]
+Type=Application
+Name=sts
+Comment=Spring Tool Suite
+Icon=/home/root03/Downloads/spring-tool-suite-4-4.14.1.RELEASE-e4.23.0-linux.gtk.x86_64/sts-4.14.1.RELEASE/icon.xpm
+Exec=/home/root03/Downloads/spring-tool-suite-4-4.14.1.RELEASE-e4.23.0-linux.gtk.x86_64/sts-4.14.1.RELEASE/SpringToolSuite4
+Terminal=false
+Categories=Development;IDE;Java;
+StartupWMClass=STS
+
+
+sudo cp sts.desktop  /usr/share/applications
+
+
+
+---->for mongodb 
+
+
+sudo apt install ./mongodb-compass_1.28.1_amd64.deb
+
+
+wget https://downloads.mongodb.com/compass/mongodb-compass_1.28.1_amd64.deb
+
+sudo apt install ./mongodb-compass_1.28.1_amd64.deb
+
+
+
+----> chrome:
+
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+
+-----> mysql 
+
+sudo apt install mysql-server
+
+ sudo systemctl start mysql.service
+
+sudo mysql
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'Root@123';
+
+ mysql -u root -p
+
+
+workbench:
+
+sudo snap install mysql-workbench-community
+
+
+Tomcat-server:
+
+add into tomcat-users.xml
+
+
+<role rolename="tomcat"/>
+<role rolename="manager-gui"/>
+<role rolename="admin-gui"/>
+<role rolename="manager-script"/>
+
+<user username="admin" password="admin" roles="tomcat, manager-gui, admin-gui, manager-script"/>
+
+
+sudo snap connect mysql-workbench-community:password-manager-service :password-manager-service
+
+
+
+
+
+
+
+
+
+
